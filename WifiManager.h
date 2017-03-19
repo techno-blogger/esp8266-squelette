@@ -9,14 +9,6 @@ class WifiManager
   private:
     bool modeSTA_actif;
     bool modeAP_actif;
-  
-    // Mode station
-    String *ssidSTA;
-    String *passwordSTA;
-
-    // SSID Mode point d'acces
-    String *ssidAP;
-    String *passwordAP;
       
   public:
     //constructeur

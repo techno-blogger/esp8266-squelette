@@ -11,9 +11,6 @@ bool WifiManager::connectWifi(String ssid, String password) {
   Serial.println("");
   Serial.println("****** Connection à un réseau WiFi");
   
-  ssidSTA = &ssid;
-  passwordSTA = &password;
-  
   int compteurBoucle = 0;
   modeSTA_actif = false;
   
@@ -47,7 +44,7 @@ bool WifiManager::connectWifi(String ssid, String password) {
   if (WiFi.status() == WL_CONNECTED){
     Serial.println("");
     Serial.println("WiFi connected");  
-    Serial.println("IP address: ");
+    Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
     
     modeSTA_actif = true;
@@ -70,9 +67,6 @@ bool WifiManager::getSTA_actif(){
 bool WifiManager::createWifi(String ssid, String password){
   Serial.println("");
   Serial.println("****** Création d'un réseau WiFi");
-  
-  ssidAP = &ssid;
-  passwordAP = &password;
   
   modeAP_actif = false;
   
